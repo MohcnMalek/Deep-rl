@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-bp-bg:       #0a2342;
+  --color-bp-surface:  #0d2b50;
+  --color-bp-surface2: #102d57;
+  --color-bp-line:     #bcd6ff;
+  --color-bp-line-dim: #7fa3cf;
+  --color-bp-problem:  #ff7a45;
+  --color-bp-solution: #5dd1a0;
+  --color-bp-text:     #dce8fb;
+  --color-bp-muted:    #7fa3cf;
+  --color-bp-cyan:     #7ecfff;
+  --font-title:  'Saira Condensed', sans-serif;
+  --font-mono:   'IBM Plex Mono', monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #0a2342;
+  color: #dce8fb;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Blueprint millimeter grid */
+body {
+  background-color: #0a2342;
+  background-image:
+    linear-gradient(rgba(180,210,255,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180,210,255,.06) 1px, transparent 1px),
+    linear-gradient(rgba(180,210,255,.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180,210,255,.14) 1px, transparent 1px);
+  background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+  border: none;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #0a2342; }
+::-webkit-scrollbar-thumb { background: rgba(188,214,255,.2); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(188,214,255,.4); }
+
+pre, code { font-family: 'IBM Plex Mono', monospace; }
+
+/* Blueprint corner marks */
+.bp-frame {
+  position: relative;
+  border: 1px solid rgba(188,214,255,.22);
+}
+.bp-frame::before,
+.bp-frame::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: rgba(188,214,255,.55);
+  border-style: solid;
+}
+.bp-frame::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+.bp-frame::after  { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
