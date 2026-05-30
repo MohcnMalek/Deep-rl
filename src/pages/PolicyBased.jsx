@@ -71,7 +71,7 @@ export default function PolicyBased() {
                   ['Ce qu\'on apprend', 'Q(s,a)', 'π(a|s)'],
                   ['Actions continues', '✗', '✓'],
                   ['Politique stochastique', '✗ (déterministe)', '✓'],
-                  ['Stabilité', 'Moyenne (instable)', 'Bonne'],
+                  ['Stabilité', 'Instable sans replay buffer ', 'Forte variance, convergence locale'],
                   ['Variance du gradient', '—', 'HAUTE ⚠'],
                 ].map(([c, v, p], i) => (
                   <tr key={i}>
